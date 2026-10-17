@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asst. Prof. Dr. Warit Ruanglertboon | Clinical Pharmacology & Precision Medicine</title>
+  <style>
+    :root {
+      --primary: #0f3d5e;
+      --primary-dark: #09273d;
+      --primary-light: #1b5c8a;
+      --accent: #00897b;
+      --accent-soft: #e0f2f1;
+      --gold: #d97706;
+      --gold-soft: #fef3c7;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Thai", sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--primary-light);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* Top Institutional Bar */
+    .top-bar {
+      background: var(--primary-dark);
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      padding: 0.55rem 1.5rem;
+    }
+
+    .top-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .top-bar-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-links a {
+      color: #e2e8f0;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .top-bar-links a:hover {
+      color: #5eead4;
+    }
+
+    /* Page section styling */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .navbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid var(--accent);
+      box-shadow: 0 2px 8px rgba(0, 137, 123, 0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      line-height: 1.25;
+    }
+
+    .brand-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-main);
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    /* Page section styling */
+    .hero {
+      background: linear-gradient(135deg, #09273d 0%, #0f3d5e 55%, #0d6960 100%);
+      color: #ffffff;
+      padding: 3.8rem 1.5rem 3.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -8%;
+      bottom: -25%;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(94, 234, 212, 0.14) 0%, rgba(255, 255, 255, 0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 230px 1.45fr 1fr;
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .hero-photo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .hero-photo {
+      width: 215px;
+      height: 255px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 18px;
+      border: 3px solid rgba(153, 246, 228, 0.65);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.32);
+      background: #ffffff;
+    }
+
+    .photo-caption {
+      font-size: 0.76rem;
+      color: #cbd5e1;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #99f6e4;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-thai {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      font-weight: 500;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin-bottom: 1.35rem;
+      max-width: 650px;
+    }
+
+    .keyword-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pill {
+      background: rgba(15, 23, 42, 0.45);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: #f1f5f9;
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #14b8a6;
+      color: #042f2e;
+    }
+
+    .btn-primary:hover {
+      background: #2dd4bf;
+      color: #042f2e;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    /* Profile Card & Live Metrics */
+    .hero-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #99f6e4;
+      margin-bottom: 0.9rem;
+      font-weight: 700;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .metric-box {
+      background: rgba(15, 23, 42, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 0.85rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .metric-val {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .metric-lbl {
+      font-size: 0.76rem;
+      color: #cbd5e1;
+      margin-top: 0.2rem;
+    }
+
+    .hero-meta-list {
+      list-style: none;
+      font-size: 0.84rem;
+      color: #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .hero-meta-list strong {
+      color: #99f6e4;
+    }
+
+    /* Main Content Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+
+    .section-header {
+      margin-bottom: 2.2rem;
+    }
+
+    .section-eyebrow {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.25;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      max-width: 780px;
+    }
+
+    /* Page section styling */
+    .vm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      margin-bottom: 0.85rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.65rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Core Competencies 3-Pillar + Skills Grid */
+    .competency-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 1.35rem;
+    }
+
+    .comp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comp-card:nth-child(2) {
+      border-top-color: var(--accent);
+    }
+
+    .comp-card:nth-child(3) {
+      border-top-color: var(--gold);
+    }
+
+    .comp-card:nth-child(4) {
+      border-top-color: #6366f1;
+    }
+
+    .comp-card h4 {
+      font-size: 1.12rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.55rem;
+    }
+
+    .comp-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.22rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    /* Page section styling */
+    .values-section {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+      gap: 1.15rem;
+    }
+
+    .value-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .value-letter {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .value-card:nth-child(even) .value-letter {
+      background: var(--accent);
+    }
+
+    .value-card h4 {
+      font-size: 1.02rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .value-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* Timeline (Experience & Education from LinkedIn & ResearchGate) */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .timeline {
+      border-left: 2px solid #cbd5e1;
+      padding-left: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.82rem;
+      top: 0.32rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-role {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-top: 0.15rem;
+    }
+
+    .timeline-org {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .timeline-detail {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Publications Filter & List */
+    .pub-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      background: var(--bg-card);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .filter-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      color: var(--text-main);
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .search-input {
+      padding: 0.5rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+      min-width: 240px;
+    }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .pub-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.35rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .pub-year-badge {
+      background: var(--primary-dark);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .pub-body {
+      flex: 1;
+    }
+
+    .pub-title {
+      font-size: 1.03rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-authors {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-journal {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .pub-cat-tag {
+      display: inline-block;
+      margin-left: 0.6rem;
+      font-size: 0.75rem;
+      background: #f1f5f9;
+      color: #475569;
+      padding: 0.12rem 0.55rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* Co-Authors & Collaborators Grid */
+    .network-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .network-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.15rem 1.3rem;
+    }
+
+    .network-card h4 {
+      font-size: 0.98rem;
+      color: var(--primary-dark);
+    }
+
+    .network-card p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* Page section styling */
+    footer {
+      background: var(--primary-dark);
+      color: #cbd5e1;
+      padding: 3rem 1.5rem 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-col p,
+    .footer-col li {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      margin-bottom: 0.45rem;
+      list-style: none;
+    }
+
+    .footer-col a {
+      color: #cbd5e1;
+    }
+
+    .footer-col a:hover {
+      color: #5eead4;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 1.5rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-photo-wrap {
+        margin: 0 auto;
+      }
+      .keyword-pills, .hero-actions {
+        justify-content: center;
+      }
+      .hero h2 {
+        font-size: 1.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Institutional & Profile Links Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div>Discipline of Pharmacology &amp; Research Center in Mathematics and Statistics With Applications, Faculty of Science, PSU</div>
+      <div class="top-bar-links">
+        <a href="https://scholar.google.com/citations?user=M4pU02xt4AQC&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Warit-Ruanglertboon-2" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://orcid.org/0000-0003-0540-7427" target="_blank" rel="noopener">ORCID: 0000-0003-0540-7427</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:warit.r@psu.ac.th">warit.r@psu.ac.th</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <div class="brand">
+        <img class="brand-avatar" id="navAvatar" src="https://i1.rgstatic.net/ii/profile.image/1134091416158211-1647399872747_Q512/Warit-Ruanglertboon-2.jpg" alt="Asst. Prof. Dr. Warit Ruanglertboon" />
+        <div class="brand-text">
+          <h1>Asst. Prof. Dr. Warit Ruanglertboon</h1>
+          <p>Clinical Pharmacology · Precision Medicine · Statistical &amp; Machine Learning</p>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About &amp; Vision</a></li>
+          <li><a href="#competencies">Core Competencies</a></li>
+          <li><a href="#values">Research Values</a></li>
+          <li><a href="#background">Experience &amp; Education</a></li>
+          <li><a href="#publications">Publications (23)</a></li>
+          <li><a href="#network">Research Network</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" id="heroPortrait" src="https://i1.rgstatic.net/ii/profile.image/1134091416158211-1647399872747_Q512/Warit-Ruanglertboon-2.jpg" alt="Asst. Prof. Dr. Warit Ruanglertboon" />
+        <span class="photo-caption">Asst. Prof. Dr. Warit Ruanglertboon</span>
+      </div>
+
+      <div>
+        <span class="hero-badge">Academic &amp; Research Profile</span>
+        <h2>Asst. Prof. Dr. Warit Ruanglertboon</h2>
+        <div class="hero-thai">ผศ.ดร.ภก.วริทธิ์ เรืองเลิศบุญ | B.Pharm., M.Sc. (Pharmacology), Ph.D. (Clinical Pharmacology)</div>
+        <p class="hero-subtitle">
+          Assistant Professor in Clinical Pharmacy &amp; Full-Time Academic Researcher in the Discipline of Pharmacology and the Research Center in Mathematics and Statistics With Applications, Faculty of Science, Prince of Songkla University. Investigating statistical learning, machine learning risk prediction, pharmacogenomics, and responsible AI integration to personalize and optimize patient pharmacotherapy.
+        </p>
+        <div class="keyword-pills">
+          <span class="pill">Clinical Pharmacology</span>
+          <span class="pill">Precision Medicine</span>
+          <span class="pill">Clinical Prediction Models</span>
+          <span class="pill">Machine Learning in R</span>
+          <span class="pill">Biomarkers &amp; Exosomes</span>
+          <span class="pill">LLMs in Pharmacy Practice &amp; Education</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://scholar.google.com/citations?user=M4pU02xt4AQC&hl=en" target="_blank" rel="noopener">
+            View Google Scholar Profile
+          </a>
+          <a class="btn btn-outline" href="https://www.researchgate.net/profile/Warit-Ruanglertboon-2" target="_blank" rel="noopener">
+            ResearchGate Profile
+          </a>
+          <a class="btn btn-outline" href="https://drive.google.com/file/d/1aFpuD8rqnMuGXTzC-qYNZNIy-SKeyf1L/view?usp=drivesdk" target="_blank" rel="noopener">
+            Curriculum Vitae (PDF)
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-title">Verified Scholarly Impact</div>
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <div class="metric-val">25+</div>
+            <div class="metric-lbl">Publications &amp; Papers</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val">174+</div>
+            <div class="metric-lbl">Total Citations</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val">1,834+</div>
+            <div class="metric-lbl">Publication Reads</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val">50+</div>
+            <div class="metric-lbl">Research Co-Authors</div>
+          </div>
+        </div>
+        <ul class="hero-meta-list">
+          <li><strong>Institution:</strong> Prince of Songkla University (Hat Yai, Songkhla)</li>
+          <li><strong>Doctoral Alma Mater:</strong> Flinders University (Precision Medicine Group)</li>
+          <li><strong>Verified Email:</strong> warit.r@psu.ac.th</li>
+          <li><strong>ORCID iD:</strong> 0000-0003-0540-7427</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">About the Researcher · เกี่ยวกับผู้วิจัย</div>
+      <h2 class="section-title">Bridging Clinical Pharmacology, Data Science &amp; Precision Medicine</h2>
+    </div>
+
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <span class="card-tag">Biography &amp; Overview</span>
+      <h3>Academic Profile Summary</h3>
+      <p>
+        Dr. Warit Ruanglertboon is a registered pharmacist, clinical pharmacologist, and data analyst collaborating closely with multidisciplinary teams of statisticians, clinicians, and biomedical scientists. He earned his Ph.D. in Clinical Pharmacology from <strong>Flinders University of South Australia</strong> as a member of the Precision Medicine Group before returning to the <strong>Discipline of Pharmacology (Division of Health and Applied Sciences)</strong> and the <strong>Research Center in Mathematics and Statistics With Applications, Faculty of Science, Prince of Songkla University</strong>. His research harnesses both classical statistical modeling and machine learning in R to predict inter-individual variability in drug exposure, survival outcomes, and severe cutaneous adverse drug reactions, alongside evaluating Large Language Models (LLMs) in drug information services, pharmacy education, and non-English clinical environments.
+      </p>
+    </div>
+
+    <div class="vm-grid">
+      <div class="card">
+        <span class="card-tag">Vision · วิสัยทัศน์</span>
+        <h3>Precision Pharmacotherapy Through Data &amp; AI</h3>
+        <p>
+          To advance precision medicine and clinical pharmacology in Thailand and internationally by integrating real-world clinical big data, pharmacogenomic biomarkers, and trustworthy artificial intelligence into patient-centered care.
+        </p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Mission · พันธกิจ</span>
+        <h3>Translational Research, Education &amp; Clinical Impact</h3>
+        <p>
+          To develop and validate clinical prediction models, mechanistic pharmacokinetic simulations, and digital decision-support tools that optimize drug dosing and prevent adverse drug reactions, while training the next generation of health scientists.
+        </p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Research Goal · เป้าหมายการวิจัย</span>
+        <h3>Personalized &amp; Safe Therapy Regimens</h3>
+        <p>
+          To translate statistical learning, pharmacogenomic screening (such as HLA and CYP variants), and validated AI assistants into pragmatic clinical pharmacy workflows that directly improve patient safety and treatment outcomes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Core Competencies -->
+  <section id="competencies" class="container" style="padding-top: 0.5rem;">
+    <div class="section-header">
+      <div class="section-eyebrow">Core Competencies · สมรรถนะหลัก</div>
+      <h2 class="section-title">Three Integrated Research Competencies</h2>
+      <p class="section-desc">
+        Integrating quantitative clinical pharmacology, biomarker research, and practical applications of artificial intelligence in pharmacy.
+      </p>
+    </div>
+
+    <div class="competency-grid">
+      <div class="comp-card">
+        <h4>1. Clinical Pharmacology &amp; Pharmaceutical Data Science</h4>
+        <p>
+          Integrating mechanistic pharmacokinetic modelling (PBPK/Simcyp and population PK with <code>nlmixr</code>) and precision dosing with statistical learning, machine learning, survival analysis, and longitudinal modelling. Applications include oncology pharmacotherapy, clinical risk prediction, paediatric dosing tools (<code>PEDIOBEDOSE</code>), and real-world hospital EMR and drug-utilisation studies.
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">PK/PD &amp; Precision Dosing</span>
+          <span class="skill-tag">PBPK &amp; Population PK</span>
+          <span class="skill-tag">R &amp; Statistical Learning</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Survival &amp; Real-World Data</span>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <h4>2. Biomarkers &amp; Pharmacogenomics</h4>
+        <p>
+          Investigating drug-metabolism biomarkers, including extracellular vesicle-derived CYP3A4 and UGT markers, and pharmacogenomic variants associated with variability in drug response and adverse reactions, including HLA-B*15:21, HLA-B*40:06, and CYP2C9 in anticonvulsant-associated cutaneous adverse drug reactions.
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">Drug-Metabolism Biomarkers</span>
+          <span class="skill-tag">HLA &amp; CYP Pharmacogenomics</span>
+          <span class="skill-tag">Extracellular Vesicles</span>
+          <span class="skill-tag">Molecular Assays</span>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <h4>3. Clinical AI &amp; Digital Pharmacy</h4>
+        <p>
+          Evaluating large language models and emerging generative AI tools for drug information services, drug–drug and herb–drug interaction assessment, virtual patient counselling in pharmacy education, and the reliability of cancer-related health information.
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">LLMs in Drug Information</span>
+          <span class="skill-tag">AI Virtual Counselling</span>
+          <span class="skill-tag">Medication Safety</span>
+          <span class="skill-tag">Evidence-Based Practice</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="values" class="values-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Core Values · ค่านิยมหลัก</div>
+        <h2 class="section-title">The P-R-I-M-E Framework for Precision Pharmacology</h2>
+        <p class="section-desc">
+          Guiding principles for research in precision pharmacology, data science, and patient-centred care.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-letter">P</div>
+          <h4>Precision-Driven</h4>
+          <p>Tailoring drug selection and dosage to individual genetic, physiological, and clinical profiles.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-letter">R</div>
+          <h4>Real-World Rigor</h4>
+          <p>Leveraging decade-long hospital EMR datasets and phase III clinical trial data for robust inference.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-letter">I</div>
+          <h4>Innovative AI</h4>
+          <p>Assessing and deploying machine learning and generative AI responsibly in clinical and educational settings.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-letter">M</div>
+          <h4>Multidisciplinary</h4>
+          <p>Collaborating across clinical pharmacists, physicians, biostatisticians, and international consortia.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-letter">E</div>
+          <h4>Ethics &amp; Safety</h4>
+          <p>Upholding Good Clinical Practice (GCP), pharmacist oversight of AI, and patient safety first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Academic Experience, Education, Awards & Certifications -->
+  <section id="background" class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Academic Trajectory · ประวัติการศึกษาและการทำงาน</div>
+      <h2 class="section-title">Appointments, Education &amp; Professional Credentials</h2>
+      <p class="section-desc">
+        Verified career milestones from ResearchGate, LinkedIn, PubMed, and Prince of Songkla University records.
+      </p>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <span class="card-tag">Academic &amp; Clinical Appointments</span>
+        <h3>Professional Experience</h3>
+        <div class="timeline" style="margin-top: 1.2rem;">
+          <div class="timeline-item">
+            <div class="timeline-date">Feb 2022 – Present</div>
+            <div class="timeline-role">Assistant Professor / Researcher &amp; Instructor</div>
+            <div class="timeline-org">Discipline of Pharmacology &amp; Research Center in Mathematics and Statistics With Applications, Faculty of Science, Prince of Songkla University</div>
+            <div class="timeline-detail">Full-time academic researcher and instructor in clinical pharmacology, precision medicine, and statistical learning (Hat Yai, Songkhla, Thailand).</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Aug 2021 – Feb 2022</div>
+            <div class="timeline-role">Postdoctoral Researcher / Research Assistant</div>
+            <div class="timeline-org">Precision Medicine Group, College of Medicine &amp; Public Health, Flinders University</div>
+            <div class="timeline-detail">Conducted clinical prediction modeling and oncology pharmacotherapy outcomes research (Adelaide, South Australia).</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2015 – 2017</div>
+            <div class="timeline-role">Researcher / University Lecturer</div>
+            <div class="timeline-org">Department of Pharmacology, Faculty of Science, Prince of Songkla University</div>
+            <div class="timeline-detail">Taught undergraduate pharmacology courses (including CNS pharmacology) and conducted preclinical neuropharmacology research.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2010 – 2015</div>
+            <div class="timeline-role">Registered Pharmacist (Hospital &amp; Community Practice)</div>
+            <div class="timeline-org">Hospital &amp; Community Pharmacy Practice, Thailand</div>
+            <div class="timeline-detail">Provided patient medication counseling, pharmacotherapy management, and multidisciplinary clinical consultations.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Degrees, Honors &amp; Certifications</span>
+        <h3>Education &amp; Distinctions</h3>
+        <div class="timeline" style="margin-top: 1.2rem;">
+          <div class="timeline-item">
+            <div class="timeline-date">Feb 2017 – Nov 2021</div>
+            <div class="timeline-role">Ph.D. in Clinical Pharmacology</div>
+            <div class="timeline-org">Flinders University of South Australia (Precision Medicine Group)</div>
+            <div class="timeline-detail">Thesis: <em>A primer in strategies towards the era of precision medicine</em>.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">May 2010 – Apr 2013</div>
+            <div class="timeline-role">M.Sc. in Pharmacology</div>
+            <div class="timeline-org">Prince of Songkla University, Thailand</div>
+            <div class="timeline-detail">Thesis: <em>The Effects of Nasturtium officinale on Learning and Memory in Stress-Induced Neurodegeneration in Mice</em>.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">May 2005 – Mar 2010</div>
+            <div class="timeline-role">Bachelor of Pharmacy (B.Pharm., Pharmaceutical Sciences)</div>
+            <div class="timeline-org">Prince of Songkla University, Thailand</div>
+            <div class="timeline-detail">Elective focus in Clinical and Hospital Pharmacy.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Key Honors &amp; Fellowships</div>
+            <div class="timeline-role">Academic Awards &amp; Specialist Training</div>
+            <div class="timeline-detail">
+              • <strong>2023:</strong> Fellow of the UK Professional Standards Framework (UKPSF)<br/>
+              • <strong>2019:</strong> British Journal of Clinical Pharmacology (BJCP) Trainee Prize<br/>
+              • <strong>2016–2021:</strong> Royal Thai Government Scholarship<br/>
+              • <strong>Certificates:</strong> HarvardX Data Science Series (Linear Regression, Inference &amp; Modeling, Wrangling, Probability, Productivity Tools, Visualization); PAGANZ <code>nlmixr</code> Workshop; UC Irvine Basics of Extracellular Vesicles; Good Clinical Practice (GCP).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Interactive Publications Repository (Google Scholar, ResearchGate & PubMed) -->
+  <section id="publications" class="container" style="padding-top: 0.5rem;">
+    <div class="section-header">
+      <div class="section-eyebrow">Scholarly Output · ผลงานตีพิมพ์ทางวิชาการ</div>
+      <h2 class="section-title">Selected Peer-Reviewed Publications (2018–2026)</h2>
+      <p class="section-desc">
+        Curated from <a href="https://scholar.google.com/citations?user=M4pU02xt4AQC&hl=en" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://www.researchgate.net/profile/Warit-Ruanglertboon-2" target="_blank" rel="noopener">ResearchGate</a>, and <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ruanglertboon+W" target="_blank" rel="noopener">PubMed</a>. Use the topic filters or search bar below to explore specific research streams.
+      </p>
+    </div>
+
+    <div class="pub-controls">
+      <div class="filter-btns">
+        <button class="filter-btn active" onclick="filterPubs('all', this)">All Selected Publications (23)</button>
+        <button class="filter-btn" onclick="filterPubs('ai', this)">Clinical AI &amp; LLMs (7)</button>
+        <button class="filter-btn" onclick="filterPubs('dosing', this)">Precision Dosing &amp; Oncology (6)</button>
+        <button class="filter-btn" onclick="filterPubs('pgx', this)">Pharmacogenomics &amp; Big Data (5)</button>
+        <button class="filter-btn" onclick="filterPubs('exosome', this)">Exosomes &amp; Preclinical (5)</button>
+      </div>
+      <input type="text" id="pubSearch" class="search-input" placeholder="Search title, journal, author, or year..." oninput="searchPubs()" />
+    </div>
+
+    <div class="pub-list" id="pubList">
+      <!-- Newly Added 2026 Publications -->
+      <div class="pub-item" data-cat="ai">
+        <span class="pub-year-badge">Sep 2026</span>
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/42591004/" target="_blank" rel="noopener">Large Language Models as Clinical Support Tools in Drug Information Services: Performance Comparison With Pharmacists</a></div>
+          <div class="pub-authors">Nuntapong Boonrit, Najwa Bin-Useng, Aphichaya Sirijariyawat, Tanawan Chaithong, Suppakun Rattayarungsri, Sutima Yodsri, Ashley M. Hopkins, <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Journal of the American College of Clinical Pharmacy (JACCP) 9(9), e70269 · DOI: 10.1002/jac5.70269 <span class="pub-cat-tag">Clinical AI &amp; Drug Info Services</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="ai">
+        <span class="pub-year-badge">Sep 2026</span>
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/42583889/" target="_blank" rel="noopener">Student Perceptions of Virtual Counseling Practice Using ChatGPT Voice Mode in Pharmacy Education</a></div>
+          <div class="pub-authors">Nuntapong Boonrit, Ashley M. Hopkins, <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Journal of the American College of Clinical Pharmacy (JACCP) 9(9), e70272 · DOI: 10.1002/jac5.70272 <span class="pub-cat-tag">Clinical AI &amp; Pharmacy Education</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="pgx">
+        <span class="pub-year-badge">2026</span>
+        <div class="pub-body">
+          <div class="pub-title">Trends in the use of non-steroidal anti-inflammatory drugs in orthopedic wards Hat Yai hospital: A decade of historical data analysis</div>
+          <div class="pub-authors">K. Ratsameemonthol, A. Rungreangrayab, <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">12th Region Medical Journal 37(2), 44–55 <span class="pub-cat-tag">Drug Utilisation &amp; 10-Year Data</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="pgx">
+        <span class="pub-year-badge">Jul 2026</span>
+        <div class="pub-body">
+          <div class="pub-title">HLA-B*15:21 carrier status is a susceptibility factor of carbamazepine-induced nonimmediate cutaneous adverse reactions in HLA-B*15:02-negative patients: A retrospective cohort study</div>
+          <div class="pub-authors"><strong>Warit Ruanglertboon</strong>, Chutima Seree-aphinan, Antida Sangiemchoey, et al., Kanoot Jaruthamsophon</div>
+          <div class="pub-journal">British Journal of Clinical Pharmacology <span class="pub-cat-tag">Pharmacogenomics &amp; cADR</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="pgx">
+        <span class="pub-year-badge">Jul 2026</span>
+        <div class="pub-body">
+          <div class="pub-title">Association of decreased CYP2C9 function, HLA-B*40:06, and hemoglobin levels with phenytoin-induced cutaneous adverse reactions in a Southern Thai population</div>
+          <div class="pub-authors">Chutima Seree-aphinan, Antida Sangiemchoey, Suwanna Setthawatcharawanich, ..., <strong>Warit Ruanglertboon</strong>, Kanoot Jaruthamsophon</div>
+          <div class="pub-journal">Frontiers in Pharmacology <span class="pub-cat-tag">Pharmacogenomics &amp; cADR</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="exosome">
+        <span class="pub-year-badge">May 2026</span>
+        <div class="pub-body">
+          <div class="pub-title">Bioactive profiling and insulin resistance-ameliorating effects of Hawm Gra dang Ngah Rice Ethanolic extract via stress kinase and IRS-Akt-GLUT2 pathway regulation in HepG2 cells</div>
+          <div class="pub-authors">Wanwisa Ayusok, <strong>Warit Ruanglertboon</strong>, Wiwit Suttithumsatid, et al., Wanida Sukketsiri</div>
+          <div class="pub-journal">Journal of Functional Foods <span class="pub-cat-tag">Experimental Pharmacology</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="ai">
+        <span class="pub-year-badge">Sep 2025</span>
+        <div class="pub-body">
+          <div class="pub-title">Capabilities of Large Language Models in Detecting and Managing Drug Interactions During Medication Reviews: Potential Implications as A Digital Assistant for Pragmatic Pharmacy Practice in Thailand</div>
+          <div class="pub-authors">Nuntapong Boonrit, Achiraya Thaweechai, Bussabong Kessarin, <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">JACCP: Journal of the American College of Clinical Pharmacy <span class="pub-cat-tag">Clinical AI &amp; LLMs</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="exosome">
+        <span class="pub-year-badge">Sep 2025</span>
+        <div class="pub-body">
+          <div class="pub-title">Acute Toxicity Evaluation of A Combined Extract (Mitragyna Speciosa and Lagerstroemia Speciosa) Leaves in Rats: Hematological, Biochemical and Histopathological Examinations</div>
+          <div class="pub-authors">Janejira Pusarattanawong, <strong>Warit Ruanglertboon</strong>, Boonyakorn Boonsri, et al., Kornsuda Thipart</div>
+          <div class="pub-journal">Trends in Sciences <span class="pub-cat-tag">Toxicology &amp; Preclinical</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="dosing">
+        <span class="pub-year-badge">Jun 2025</span>
+        <div class="pub-body">
+          <div class="pub-title">Exploring the Clinical Characteristics and Survival Outcomes in Colorectal Cancer Patients in Hatyai Hospital: A Retrospective Cohort Study</div>
+          <div class="pub-authors">Makusee Masae, Ajira Nasawat, Natthawut Sangsakul, et al., <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Journal of Current Science and Technology <span class="pub-cat-tag">Oncology &amp; Survival Analysis</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="ai">
+        <span class="pub-year-badge">Feb 2025</span>
+        <div class="pub-body">
+          <div class="pub-title">Generative AI Chatbots for Reliable Cancer Information: Evaluating web-search, multilingual, and reference capabilities of emerging large language models</div>
+          <div class="pub-authors">Bradley Menz, Natansh Modi, Ahmad Abuhelwa, ..., <strong>Warit Ruanglertboon</strong>, Ashley M. Hopkins</div>
+          <div class="pub-journal">European Journal of Cancer <span class="pub-cat-tag">Clinical AI &amp; Oncology</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="pgx">
+        <span class="pub-year-badge">Sep 2024</span>
+        <div class="pub-body">
+          <div class="pub-title">Long-Term Evaluation of Allopurinol Effectiveness in the Thai Population: Insights from 10 Years of Real-World Big Data Analysis</div>
+          <div class="pub-authors">Kanoot Jaruthamsophon, Polathep Vichitkunakorn, <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Journal of Health Science and Medical Research <span class="pub-cat-tag">Real-World Big Data</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="ai">
+        <span class="pub-year-badge">Sep 2024</span>
+        <div class="pub-body">
+          <div class="pub-title">Exploring community pharmacists' attitudes in Thailand towards ChatGPT usage: A pilot qualitative investigation</div>
+          <div class="pub-authors">Nuntapong Boonrit, Kornchanok Chaisawat, Chanakarn Phueakong, et al., <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Digital Health <span class="pub-cat-tag">Clinical AI &amp; Digital Health</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="dosing">
+        <span class="pub-year-badge">Aug 2024</span>
+        <div class="pub-body">
+          <div class="pub-title">Development and Evaluation of a Prototype Mobile Application for Intravenous Drug Dose Calculation in Overweight and Obese Thai Children: Precision Dosing in Practice</div>
+          <div class="pub-authors">Nuntapong Boonrit, Nansinee Klaidokchan, Apisit Niyomdecha, et al., <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Hospital Pharmacy <span class="pub-cat-tag">Precision Dosing App</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="pgx">
+        <span class="pub-year-badge">2024</span>
+        <div class="pub-body">
+          <div class="pub-title">A Scoping Review of Literature to Analyse the Interaction between Cannabis and Drugs Used in Non-Communicable Diseases</div>
+          <div class="pub-authors"><strong>Warit Ruanglertboon</strong>, et al.</div>
+          <div class="pub-journal">Peer-Reviewed Scoping Review <span class="pub-cat-tag">Drug-Herb Interactions &amp; NCDs</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="ai">
+        <span class="pub-year-badge">Feb 2024</span>
+        <div class="pub-body">
+          <div class="pub-title">Analysing Credibility of Information on Thai Herbs Generated by the ChatGPT from Pharmacists' Perspectives</div>
+          <div class="pub-authors">Supattra Limsuwanchote, Athip Sakunphueak, Nuntapong Boonrit, et al., <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Peer-Reviewed Article <span class="pub-cat-tag">Clinical AI &amp; Herbal Medicine</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="ai">
+        <span class="pub-year-badge">Oct 2023</span>
+        <div class="pub-body">
+          <div class="pub-title">Assessment of the Appropriateness of Responses in Thai from ChatGPT on the Questions for Recommendations of Drug Uses in Common Illnesses</div>
+          <div class="pub-authors">Nuntapong Boonrit, Ashley M. Hopkins, <strong>Warit Ruanglertboon</strong></div>
+          <div class="pub-journal">Thai Journal of Pharmacy Practice 15(4), 1135–1148 <span class="pub-cat-tag">Clinical AI &amp; LLMs</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="dosing">
+        <span class="pub-year-badge">Apr 2022</span>
+        <div class="pub-body">
+          <div class="pub-title">A clinical scoring tool validated with machine learning for predicting severe hand–foot syndrome from sorafenib in hepatocellular carcinoma</div>
+          <div class="pub-authors">Ahmad Abuhelwa, Sarah Badaoui, Hoi-Yee Yuen, ..., <strong>Warit Ruanglertboon</strong>, Ashley M. Hopkins</div>
+          <div class="pub-journal">Cancer Chemotherapy and Pharmacology <span class="pub-cat-tag">Machine Learning &amp; Oncology</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="dosing">
+        <span class="pub-year-badge">Mar 2022</span>
+        <div class="pub-body">
+          <div class="pub-title">State-of-the-art knowledge on the regulation of advanced therapy medicinal products</div>
+          <div class="pub-authors">Patcharaphun Kidpun, <strong>Warit Ruanglertboon</strong>, Rapeepun Chalongsuk</div>
+          <div class="pub-journal">Personalized Medicine <span class="pub-cat-tag">Precision Medicine Policy</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="dosing">
+        <span class="pub-year-badge">Apr 2021</span>
+        <div class="pub-body">
+          <div class="pub-title">Mechanistic Modelling Identifies and Addresses the Risks of Empiric Concentration-Guided Sorafenib Dosing</div>
+          <div class="pub-authors"><strong>Warit Ruanglertboon</strong>, Michael J. Sorich, Ashley M. Hopkins, Andrew Rowland</div>
+          <div class="pub-journal">Pharmaceuticals <span class="pub-cat-tag">PBPK &amp; Precision Dosing</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="dosing">
+        <span class="pub-year-badge">Oct 2020</span>
+        <div class="pub-body">
+          <div class="pub-title">The effect of proton pump inhibitors on survival outcomes in advanced hepatocellular carcinoma treated with sorafenib</div>
+          <div class="pub-authors"><strong>Warit Ruanglertboon</strong>, Michael J. Sorich, Jessica M. Logan, Andrew Rowland, Ashley M. Hopkins</div>
+          <div class="pub-journal">Journal of Cancer Research and Clinical Oncology <span class="pub-cat-tag">Oncology &amp; Drug Interactions</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="dosing">
+        <span class="pub-year-badge">May 2020</span>
+        <div class="pub-body">
+          <div class="pub-title">Effect of early adverse events resulting in sorafenib dose adjustments on survival outcomes of advanced hepatocellular carcinoma patients</div>
+          <div class="pub-authors"><strong>Warit Ruanglertboon</strong>, Michael J. Sorich, Andrew Rowland, Ashley M. Hopkins</div>
+          <div class="pub-journal">International Journal of Clinical Oncology <span class="pub-cat-tag">Oncology &amp; Dose Optimization</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="exosome">
+        <span class="pub-year-badge">Oct 2019</span>
+        <div class="pub-body">
+          <div class="pub-title">The Neuroprotective Effect of Nasturtium officinale on Learning Ability and Density of Parvalbumin Neurons in the Hippocampus of Neurodegenerative-Induced Mice Model</div>
+          <div class="pub-authors"><strong>Warit Ruanglertboon</strong>, Ekkasit Kumarnsit, Sukanya Dej-adisai, Wandee Udomuksorn</div>
+          <div class="pub-journal">Sains Malaysiana <span class="pub-cat-tag">Neuropharmacology</span></div>
+        </div>
+      </div>
+
+      <div class="pub-item" data-cat="exosome">
+        <span class="pub-year-badge">Nov 2018</span>
+        <div class="pub-body">
+          <div class="pub-title">Plasma extracellular nanovesicle (exosome)-derived biomarkers for drug metabolism pathways: a novel approach to characterize variability in drug exposure</div>
+          <div class="pub-authors">Andrew Rowland, <strong>Warit Ruanglertboon</strong>, Madelé Van Dyk, et al., Michael J. Sorich</div>
+          <div class="pub-journal">British Journal of Clinical Pharmacology <span class="pub-cat-tag">Exosome Biomarkers</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Research Network & Co-Authors -->
+  <section id="network" class="container" style="padding-top: 0.5rem;">
+    <div class="section-header">
+      <div class="section-eyebrow">Collaborative Network · เครือข่ายความร่วมมือวิจัย</div>
+      <h2 class="section-title">Key Research Collaborators &amp; Co-Authors</h2>
+      <p class="section-desc">
+        Active national and international research partnerships documented on Google Scholar, ResearchGate, and PubMed.
+      </p>
+    </div>
+
+    <div class="network-grid">
+      <div class="network-card">
+        <h4>Prof. Ashley Mark Hopkins</h4>
+        <p>Flinders University · Flinders Health and Medical Research Institute (Precision Medicine &amp; Clinical AI)</p>
+      </div>
+      <div class="network-card">
+        <h4>Prof. Michael J. Sorich</h4>
+        <p>Flinders University · Clinical Pharmacology &amp; Clinical Epidemiology</p>
+      </div>
+      <div class="network-card">
+        <h4>Prof. Andrew Rowland</h4>
+        <p>Flinders University · Clinical Pharmacology, Exosome Biomarkers &amp; PBPK</p>
+      </div>
+      <div class="network-card">
+        <h4>Dr. Kanoot Jaruthamsophon</h4>
+        <p>Prince of Songkla University · Faculty of Medicine (Pharmacogenomics &amp; Big Data)</p>
+      </div>
+      <div class="network-card">
+        <h4>Nuntapong Boonrit</h4>
+        <p>Prince of Songkla University · Department of Clinical Pharmacy (LLMs, Drug Info &amp; Pediatric Dosing)</p>
+      </div>
+      <div class="network-card">
+        <h4>Dr. Polathep Vichitkunakorn</h4>
+        <p>Prince of Songkla University · Faculty of Medicine (Clinical Epidemiology)</p>
+      </div>
+      <div class="network-card">
+        <h4>Dr. Supattra Limsuwanchote</h4>
+        <p>Prince of Songkla University · Pharmacology &amp; Herbal Drug Information</p>
+      </div>
+      <div class="network-card">
+        <h4>Songklanagarind &amp; Hat Yai Hospital Teams</h4>
+        <p>Clinical Pharmacy, Orthopedics &amp; Oncology Real-World Outcomes Collaborations</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Asst. Prof. Dr. Warit Ruanglertboon</h4>
+        <p>ผศ.ดร.ภก.วริทธิ์ เรืองเลิศบุญ</p>
+        <p>Discipline of Pharmacology &amp; Research Center in Mathematics and Statistics With Applications<br/>Faculty of Science, Prince of Songkla University, Hat Yai, Songkhla 90110, Thailand</p>
+        <p>Email: <a href="mailto:warit.r@psu.ac.th">warit.r@psu.ac.th</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Academic Profiles</h4>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=M4pU02xt4AQC&hl=en" target="_blank" rel="noopener">Google Scholar Citations</a></li>
+          <li><a href="https://www.researchgate.net/profile/Warit-Ruanglertboon-2" target="_blank" rel="noopener">ResearchGate Profile</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ruanglertboon+W" target="_blank" rel="noopener">PubMed Indexed Articles</a></li>
+          <li><a href="https://orcid.org/0000-0003-0540-7427" target="_blank" rel="noopener">ORCID (0000-0003-0540-7427)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Core Research Themes</h4>
+        <ul>
+          <li>Clinical Pharmacology &amp; Precision Medicine</li>
+          <li>Machine Learning &amp; Clinical Prediction Models</li>
+          <li>Exosome Biomarkers &amp; Pharmacogenomics</li>
+          <li>Large Language Models in Pharmacy Practice &amp; Education</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Asst. Prof. Dr. Warit Ruanglertboon · Prince of Songkla University. </div>
+      <div>Clinical pharmacology · Pharmaceutical data science · Precision medicine</div>
+    </div>
+  </footer>
+
+  <script>
+    let currentCategory = 'all';
+
+    function filterPubs(category, btnEl) {
+      currentCategory = category;
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      applyFilters();
+    }
+
+    function searchPubs() {
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const q = (document.getElementById('pubSearch').value || '').toLowerCase().trim();
+      const items = document.querySelectorAll('.pub-item');
+      items.forEach(item => {
+        const cat = item.getAttribute('data-cat');
+        const text = item.innerText.toLowerCase();
+        const catMatch = (currentCategory === 'all') || (cat === currentCategory);
+        const searchMatch = !q || text.includes(q);
+        item.style.display = (catMatch && searchMatch) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
